@@ -40,3 +40,4 @@ def position_taken?(index)
       return true
     end
   end
+  end
