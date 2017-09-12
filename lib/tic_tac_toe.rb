@@ -32,8 +32,8 @@ def move(index, token = "X")
 end
 
 def position_taken?(index)
-  if @board[index]==" " ||
-      @board[index==""
+  if @board[index] == " " ||
+      @board[index] == ""
     return false
     elsif @board[index] == "X" ||
       @board[index] == "O"
