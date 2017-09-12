@@ -126,4 +126,16 @@ def draw?
     return false
     end
 end
+
+def over?
+ if won? && full? == true
+   return true
+ elsif won? && full? == false
+     return true
+   elsif draw? == true
+     return true
+   else
+     return false
+   end
+ end
 end
