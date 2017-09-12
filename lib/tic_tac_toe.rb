@@ -58,4 +58,13 @@ def turn_count
   end
   counter
 end
+
+def current_player
+  if turn_count.even?
+    player = "X"
+  else
+    player = "O"
+  end
+end
+
 end
