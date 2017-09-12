@@ -40,4 +40,12 @@ def position_taken?(index)
       return true
     end
   end
+
+  def valid_move?(index)
+  if index.between?(0, 8) == true && position_taken?(index) == true
+    return false
+  elsif index.between?(0, 8) == true
+    return true
+  end
+end
   end
