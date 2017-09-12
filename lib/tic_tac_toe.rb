@@ -139,4 +139,11 @@ def over?
    end
  end
 
+ def winner
+  if won? == false
+    return nil
+  else @board[won?[0]]
+end
+end
+
 end
