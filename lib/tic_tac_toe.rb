@@ -80,4 +80,29 @@ else
 end
 end
 
+def won?
+
+  winning_combination = WIN_COMBINATIONS.select do |win_combination|
+    win_index_1 = win_combination[0]
+    win_index_2 = win_combination[1]
+    win_index_3 = win_combination[2]
+
+    if @board[win_index_1] == "X" && @board[win_index_2] == "X" && @board[win_index_3] == "X"
+      return win_combination
+    elsif @board[win_index_1] == "O" && @board[win_index_2] == "O" && @board[win_index_3] == "O"
+      return win_combination
+    end
+  end
+
+  empty_board = @board.all? do |board_index|
+    board_index == nil || board_index == " "
+  end
+
+  if empty_board
+    return false
+  elsif empty_board == false && winning_combination == []
+    return false
+  end
+end
+
 end
